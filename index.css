@@ -1,0 +1,276 @@
+@font-face {
+    font-family: Just-Bubble;
+    src: url(fontes/JustBubble.ttf);
+}
+
+@font-face {
+    font-family: Yellow-Candy;
+    src: url(fontes/YellowCandy.otf);
+}
+
+body {
+    margin: 0;
+}
+
+main {
+    width: 100%;
+    min-height: 100vh;
+    padding: 3rem 0;
+
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+
+    background: url('img/bg3.png');
+    background-repeat: repeat;
+    background-size: 300px;
+}
+
+.titulo {
+    font-family: Just-Bubble;
+    font-size: 2rem;
+    -webkit-text-stroke: 1px white;
+    text-shadow: 0 3px 1px rgb(0, 94, 70);
+    color: rgb(255, 166, 0);
+    margin-bottom: 0 2rem;
+    margin-bottom: 2rem;
+
+    transition: 0.8s ease;
+}
+
+.dicas {
+    width: 1120px;
+
+    background: white;
+    border-radius: 2rem;
+    padding: 1rem;
+    border-radius: 20px;
+    border: 4px solid white;
+    box-shadow: inset 0px 0px 0px 4px rgb(0, 94, 70);
+    box-sizing: border-box;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-wrap: wrap;
+    margin-bottom: 1rem
+}
+
+.dica, .traco {
+    color: #002c21;
+    font-size: 1.70rem;
+    font-family: Yellow-Candy;
+    text-shadow: -1px 1px #8ebbaf;
+
+    transition: 0.8s ease;
+}
+
+.dica.encontrada {
+    color: rgb(249, 186, 0);
+    text-shadow: -2px 2px rgb(102 77 0);
+}
+
+.traco {
+    margin: 0 1rem;
+}
+
+.cacaPalavrasLyt {
+    min-width: 1120px;
+    display: none;
+    opacity: 0;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+
+    transition: 0.8s ease;
+}
+
+#cacaPalavrasCont {
+    background: white;
+    border-radius: 2rem;
+    padding: 1rem;
+    border-radius: 20px;
+    border: 4px solid white;
+    box-shadow: inset 0px 0px 0px 4px rgb(0, 94, 70);
+    box-sizing: border-box;
+
+    transition: 0.8s ease;
+}
+
+#cacaPalavras {
+    table-layout: fixed;
+    overflow: hidden;
+}
+
+.cp_letra {
+    width: 30px;
+    float: left;
+    color: #002c21;
+    border: 2px solid rgb(0, 94, 70);
+    box-shadow: inset 0px -1.5px 1px 0px rgb(0 94 70);
+    border-radius: 2px;
+    font-size: 0.5rem;
+    text-align: center;
+    margin: 3px;
+    border-radius: 0.5rem;
+    cursor: pointer;
+
+    transition: 0.5s ease-out;
+}
+
+.cp_letra span {
+    width: 100%;
+    height: 100%;
+    display: flex;
+    align-items: flex-start;
+    justify-content: center;
+    font-size: calc(1.5rem - (30%));
+    font-family: Yellow-Candy;
+    text-shadow: -1px 1px #8ebbaf;
+    transition: 0.5s ease-out;
+}
+
+.cp_letra.hacked{
+    background: #8de948;
+}
+
+.cp_letra.clicked,
+.cp_letra.clicked.hacked {
+    background: #ffa600;
+}
+
+.cp_letra.clicked span {
+    text-shadow: -1px 1px #b76400;
+}
+
+.btnComecar {
+    font-family: Just-Bubble;
+    font-size: 2rem;
+    border: 3px solid white;
+    color: white;
+    border-radius: 1rem;
+    cursor: pointer;
+
+    padding: 1.5rem;
+
+    text-shadow: -2px 2px #b76400;
+
+    background-color: rgb(255, 166, 0);
+    box-shadow: 0 2px 1px 1px rgb(0 94 70);
+
+    transition: 0.8s ease;
+}
+
+.mdl_lyt {
+    position: relative;
+    width: 100%;
+    height: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background: white;
+    border: 4px solid white;
+    box-shadow: inset 0px 0px 0px 4px rgb(0 94 70);
+    box-sizing: border-box;
+    border-radius: 1rem;
+    pointer-events: auto;
+}
+
+.mdl_bordas {
+    width: 100%;
+    height: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border: 4px solid white;
+    margin: 4px;
+    box-shadow: inset 0px 0px 0px 4px rgb(249 186 0);
+    box-sizing: border-box;
+    border-radius: 10px;
+}
+
+.mdl_palavraEncontrada {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    font-family: 'Yellow-Candy';
+    padding: 1.5rem;
+    color: #002c21;
+}
+
+.mdl_desc {
+    font-size: 1.3rem;
+    text-align: center;
+}
+
+.mdl_desc b {
+    font-weight: 500;
+    color:#005e46;
+}
+
+.mdl_btnOK {
+    margin-top: 1rem;
+    border: none;
+    padding: 0.75rem 1.5rem;
+    border-radius: 1rem;
+    background: #00dbc6;
+    color: white;
+    text-shadow: -1px 1px #0f5132;
+    font-family: 'Just-Bubble';
+    
+    text-shadow: -2px 2px #b76400;
+
+    background-color: rgb(255, 166, 0);
+    box-shadow: 0 2px 1px 1px #854800;
+
+    cursor: pointer;
+}
+
+.mdl_titulo {
+    color: rgb(0 94 70);
+    text-shadow: -2px 2px rgb(0 44 33);
+}
+
+.mdl_titulo.terminou {
+    color: rgb(249, 186, 0);
+    text-shadow: -2px 2px rgb(102 77 0);
+}
+
+.hackLyt {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 160px;
+    height: 45px;
+    background-color: #00743e;
+    border-radius: 0 0 20px 0px;
+    box-shadow: 0px 1px 6px 0px #0f5132;
+
+    opacity: 0;
+
+    display: none;
+    align-items: center;
+    justify-content: center;
+
+    transition: 0.8s ease;
+}
+
+.form-check-input:checked {
+    background-color: #34cba5 !important;
+    border-color: #038d69 !important;
+}
+
+.form-check-input:focus {
+    border-color: #038d69 !important;
+    outline: 0;
+    box-shadow: 0 0 0 0.25rem rgba(5, 172, 136, 0.20) !important;
+}
+
+.hackLyt span {
+    color: whitesmoke;
+    text-shadow: -1px 2px #002c21;
+    font-family: 'Yellow-Candy';
+}
+
