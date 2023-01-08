@@ -106,8 +106,8 @@ $(document).ready(() => {
                         <p> <b>1.</b>  Ache as <b>10 palavras</b> que estão embaralhadas para <b>vencer</b> o jogo </p>
                         <p> <b>2.</b>  Segure <b>CTRL</b> e <b>clique</b> com o mouse para selecionar uma letra </p>
                         <p> <b>3.</b>  Ao soltar <b>CTRL</b>, caso tenha achado a palavra, uma <b>descrição</b> sobre será exibida </p>
-                        <p> <b>4.</b>  Pra ficar mais fácil de corrigir professor eu adicionei um <b>"ATIVAR O HACK"</b> ali no canto pra você kkkkk </p>
-                        <p> <b> Agora sabendo de todas as regras, tenha um bom jogo :) </b> </p>`);
+                        <p> <b>4.</b>  Pra ficar mais fácil de testar eu adicionei um <b>"ATIVAR O HACK"</b> ali no canto pra você, divirta-se! </p>
+                        <p> <b> Agora sabendo de todas as regras, tenha um bom jogo :D </b> </p>`);
 
                     $("#mdl_DescPalavra").modal('show');
                 }, 1000);
